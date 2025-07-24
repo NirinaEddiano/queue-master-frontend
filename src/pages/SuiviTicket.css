@@ -1,0 +1,248 @@
+:root {
+    --primary-blue: #1A3C6D;
+    --accent-gold: #FFD700;
+    --bg-light: #F8FAFC;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
+    background-color: #FFFFFF; /* Fond blanc pour la page principale */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    min-height: 100vh;
+    padding-left: 270px; /* Espace pour la barre de navigation de 250px + 20px de padding */
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #FFFFFF;
+  }
+  
+  .main {
+    max-width: 900px; /* Largeur maximale pour le contenu */
+    margin: 0 auto;
+    padding: 1.5rem;
+  }
+  
+  .card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gold-border {
+    border: 2px solid var(--accent-gold);
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-pulse {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+  
+  .text-primary-blue {
+    color: var(--primary-blue);
+  }
+  
+  .text-accent-gold {
+    color: var(--accent-gold);
+  }
+  
+  .bg-primary-blue {
+    background-color: var(--primary-blue);
+  }
+  
+  .bg-accent-gold {
+    background-color: var(--accent-gold);
+  }
+  
+  .bg-yellow-100 {
+    background-color: #fefcbf;
+  }
+  
+  .text-yellow-600 {
+    color: #ca8a04;
+  }
+  
+  .bg-green-100 {
+    background-color: #d1fae5;
+  }
+  
+  .text-green-600 {
+    color: #16a34a;
+  }
+  
+  .bg-red-50 {
+    background-color: #fef2f2;
+  }
+  
+  .text-red-600 {
+    color: #dc2626;
+  }
+  
+  .bg-gray-50 {
+    background-color: #f9fafb;
+  }
+  
+  .bg-gray-200 {
+    background-color: #e5e7eb;
+  }
+  
+  .text-gray-600 {
+    color: #4b5563;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    height: 10px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    background-color: var(--primary-blue);
+    height: 100%;
+    transition: width 0.3s ease;
+  }
+  
+  .qr-code-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1006; /* Au-dessus de la barre de navigation */
+  }
+  
+  .qr-code-container {
+    background-color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .qr-code-container button {
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .qr-code-container button:hover {
+    background-color: #2a3555; /* Bleu plus foncé */
+  }
+  
+  .ticket-button {
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .ticket-button:hover {
+    background-color: #2a3555;
+    transform: translateY(-2px);
+  }
+  
+  .cancel-button {
+    background-color: #dc2626;
+    color: #FFFFFF;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #b91c1c;
+    transform: translateY(-2px);
+  }
+  
+  .error-message {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .now-serving {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-2xl{
+    padding-left: 275px;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding-left: 20px; /* Supprime l'espace pour la barre de navigation sur mobile */
+    }
+  
+    .main {
+      padding: 1rem;
+    }
+  
+    .card {
+      padding: 1rem;
+    }
+  
+    .ticket-button, .cancel-button {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+    }
+  
+    .qr-code-container {
+      width: 90%;
+    }
+  }

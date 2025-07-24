@@ -1,0 +1,117 @@
+:root {
+    --primary-blue: #1A3C6D;
+    --accent-gold: #FFD700;
+    --accent-turquoise: #06B6D4;
+    --bg-light: #F8FAFC;
+  }
+  
+  .bord-droite {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--bg-light);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1002;
+    color: #1A3C6D;
+  }
+  
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-gold);
+    margin-bottom: 10px;
+  }
+  
+  .username {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .ticket-section {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  
+  .ticket-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--accent-gold);
+    text-align: center;
+  }
+  
+  .ticket-details {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .ticket-details p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .ticket-details p strong {
+    color: #1A3C6D;
+  }
+  
+  .track-button,
+  .take-ticket-button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+  }
+  
+  .track-button {
+    background-color: #1A3C6D;
+    color: white;
+  }
+  
+  .track-button:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+  }
+  
+  .take-ticket-button {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+  }
+  
+  .take-ticket-button:hover {
+    background-color: #eab308;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .bord-droite {
+      display: none;
+    }
+  }

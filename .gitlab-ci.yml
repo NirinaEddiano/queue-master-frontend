@@ -1,0 +1,22 @@
+image: node:lts  
+
+pages:
+  stage: deploy
+  script:
+    - npm install --legacy-peer-deps
+    - CI=false NODE_OPTIONS=--max_old_space_size=4096 npm run build
+    - cp build/index.html build/404.html
+    - echo -e "/* /index.html 200\n/static/* /static/:splat 200" > build/_redirects
+    - mv build/* public/  # Déplace les fichiers directement dans public
+    - mv build/.* public/ 2>/dev/null || true  # Gère les fichiers cachés
+    - ls -la public/  # Vérifie le contenu de public
+  artifacts:
+    paths:
+      - public
+    expire_in: 30 days
+  environment:
+    name: production
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "master"'
+  variables:
+    DISABLE_GZIP: "true"

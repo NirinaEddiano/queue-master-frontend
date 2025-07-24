@@ -1,0 +1,496 @@
+:root {
+    --primary-blue: #1A3C6D;
+    --accent-gold: #FFD700;
+    --accent-turquoise: #06B6D4;
+    --bg-light: #F8FAFC;
+  }
+  
+  .bord-droite {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--primary-blue);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1002;
+    color: white;
+  }
+  
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent-gold);
+    margin-bottom: 10px;
+  }
+  
+  .username {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .ticket-section {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+  }
+  
+  .ticket-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: var(--accent-gold);
+    text-align: center;
+  }
+  
+  .ticket-details {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .ticket-details p {
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  
+  .ticket-details p strong {
+    color: var(--accent-turquoise);
+  }
+  
+  .track-button,
+  .take-ticket-button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border: none;
+  }
+  
+  .track-button {
+    background-color: var(--accent-turquoise);
+    color: var(--primary-blue);
+  }
+  
+  .track-button:hover {
+    background-color: #0ea5e9;
+    transform: translateY(-2px);
+  }
+  
+  .take-ticket-button {
+    background-color: var(--accent-gold);
+    color: var(--primary-blue);
+  }
+  
+  .take-ticket-button:hover {
+    background-color: #eab308;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .bord-droite {
+      display: none;
+    }
+  },,:root {
+    --primary-blue: #1A3C6D;
+    --accent-gold: #FFD700;
+    --accent-turquoise: #06B6D4;
+    --bg-light: #F8FAFC;
+  }
+  
+  .client-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--primary-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 1005;
+    padding: 20px 0;
+  }
+  
+  .navbar-brand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+  
+  .brand-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+  }
+  
+  .burger-button {
+    display: none; /* Masqué par défaut (PC) */
+    background: none;
+    border: none;
+    color: var(--accent-gold);
+    cursor: pointer;
+  }
+  
+  .navbar-menu {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .navbar-item {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: white;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .navbar-item:hover,
+  .navbar-item.active {
+    background-color: var(--accent-turquoise);
+    color: var(--primary-blue);
+  }
+  
+  .navbar-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .profile-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent-gold);
+    margin-right: 10px;
+  }
+  
+  .username {
+    font-size: 0.9rem;
+  }
+  
+  .logout-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid var(--accent-turquoise);
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: var(--accent-turquoise);
+    color: var(--primary-blue);
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1003;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  
+  .overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .client-navbar {
+      width: 100%;
+      height: auto;
+      position: static;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px 20px;
+    }
+  
+    .burger-button {
+      display: block; /* Affiché uniquement sur mobile */
+    }
+  
+    .navbar-menu {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100vh;
+      background-color: var(--primary-blue);
+      transition: left 0.3s;
+      z-index: 1004;
+      padding-top: 60px;
+    }
+  
+    .navbar-menu.open {
+      left: 0;
+    }
+  
+    .navbar-brand {
+      flex-grow: 1;
+    }
+  },utilise fond blanc pour ce deux css la ,'cesta dire que le fond du page est blanc --bg-light: #F8FAFC; pas celle la ,.client-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: var(--primary-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 1005;
+    padding: 20px 0;,,et ameliore les couleurs par rapport a cela,,import React, { useState, useEffect } from 'react';
+import axios from '../utils/axiosConfig';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import './BordDroite.css';
+
+const BordDroite = () => {
+  const [username, setUsername] = useState('');
+  const [profileImage, setProfileImage] = useState('');
+  const [activeTicket, setActiveTicket] = useState(null);
+  const [totalTickets, setTotalTickets] = useState(0);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const userResponse = await axios.get('/api/users/user/');
+        setUsername(userResponse.data.username);
+        const imageUrl = userResponse.data.profile_image
+          ? userResponse.data.profile_image.startsWith('http')
+            ? userResponse.data.profile_image
+            : `http://localhost:8000${userResponse.data.profile_image}`
+          : 'https://via.placeholder.com/80';
+        setProfileImage(imageUrl);
+
+        const ticketsResponse = await axios.get('/api/tickets/list/?user_only=true');
+        const userTickets = ticketsResponse.data || [];
+        const active = userTickets.find((ticket) => ticket.statut === 'attente');
+        setActiveTicket(active);
+
+        if (active) {
+          const queueResponse = await axios.get(`/api/tickets/queue/?bank_id=${active.bank.id}&service_id=${active.service.id}`);
+          setTotalTickets(queueResponse.data.length);
+        }
+      } catch (err) {
+        console.error('Erreur récupération données:', err);
+        toast.error('Erreur lors du chargement des données');
+      }
+    };
+    fetchData();
+  }, []);
+
+  const handleTakeTicket = () => {
+    navigate('/home');
+  };
+
+  const handleTrackQueue = () => {
+    navigate(`/suivi-ticket?bank_id=${activeTicket.bank.id}&service_id=${activeTicket.service.id}`);
+  };
+
+  return (
+    <div className="bord-droite">
+      <div className="profile-section">
+        <img
+          src={profileImage}
+          alt="Profile"
+          className="profile-image"
+        />
+        <h3 className="username">{username || 'Client'}</h3>
+      </div>
+      <div className="ticket-section">
+        {activeTicket ? (
+          <>
+            <h4 className="ticket-title">Ticket Actif</h4>
+            <div className="ticket-details">
+              <p><strong>Banque :</strong> {activeTicket.bank.name}</p>
+              <p><strong>Service :</strong> {activeTicket.service.name}</p>
+              <p><strong>Guichet :</strong> {activeTicket.guichet?.number || 'Non assigné'}</p>
+              <p><strong>Numéro :</strong> {activeTicket.numero}</p>
+              <p><strong>Position :</strong> {activeTicket.position}/{totalTickets}</p>
+            </div>
+            <button
+              onClick={handleTrackQueue}
+              className="track-button"
+            >
+              <i className="fas fa-list-ul mr-2"></i> Suivre la file
+            </button>
+          </>
+        ) : (
+          <>
+            <h4 className="ticket-title">Pas de ticket actif</h4>
+            <button
+              onClick={handleTakeTicket}
+              className="take-ticket-button"
+            >
+              <i className="fas fa-ticket-alt mr-2"></i> Prendre un ticket
+            </button>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default BordDroite;,,import React, { useState, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
+import axios from '../utils/axiosConfig';
+import { toast } from 'react-toastify';
+import './ClientNavbar.css';
+
+const ClientNavbar = () => {
+  const [username, setUsername] = useState('');
+  const [profileImage, setProfileImage] = useState('');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await axios.get('/api/users/user/');
+        setUsername(response.data.username);
+        const imageUrl = response.data.profile_image
+          ? response.data.profile_image.startsWith('http')
+            ? response.data.profile_image
+            : `http://localhost:8000${response.data.profile_image}`
+          : 'https://via.placeholder.com/40';
+        setProfileImage(imageUrl);
+      } catch (err) {
+        console.error('Erreur récupération utilisateur:', err);
+        toast.error('Erreur lors du chargement du profil');
+      }
+    };
+    fetchUser();
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('refresh_token');
+    navigate('/');
+    toast.success('Déconnexion réussie');
+  };
+
+  const isActive = (path) => location.pathname === path;
+
+  return (
+    <>
+      <nav className="client-navbar">
+        <div className="navbar-brand">
+          <span className="brand-title">
+            <i className="fas fa-ticket-alt mr-2 text-accent-gold"></i> QueueMaster
+          </span>
+          <button
+            className="burger-button"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d={isMenuOpen ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'}
+              />
+            </svg>
+          </button>
+        </div>
+        <div className={`navbar-menu ${isMenuOpen ? 'open' : ''}`}>
+          {[
+            { path: '/home', label: 'Accueil', icon: 'fas fa-home' },
+            { path: '/profil', label: 'Profil', icon: 'fas fa-user' },
+            { path: '/suivi-ticket', label: 'File d’attente', icon: 'fas fa-list-ul' },
+            { path: '/notifications', label: 'Notifications', icon: 'fas fa-bell' },
+            { path: '/rendez-vous', label: 'Rendez-vous', icon: 'fas fa-calendar-alt' },
+          ].map((item) => (
+            <button
+              key={item.path}
+              onClick={() => {
+                navigate(item.path);
+                setIsMenuOpen(false);
+              }}
+              className={`navbar-item ${isActive(item.path) ? 'active' : ''}`}
+            >
+              <i className={`${item.icon} mr-2 text-accent-gold`}></i> {item.label}
+            </button>
+          ))}
+          <div className="navbar-footer">
+            <div className="profile-container">
+              <img
+                src={profileImage}
+                alt="Profile"
+                className="profile-image"
+              />
+              <span className="username">{username || 'Client'}</span>
+            </div>
+            <button
+              onClick={handleLogout}
+              className="logout-button"
+            >
+              <i className="fas fa-sign-out-alt mr-2 text-accent-gold"></i> Déconnexion
+            </button>
+          </div>
+        </div>
+      </nav>
+      <div
+        className={`overlay ${isMenuOpen ? 'open' : ''}`}
+        onClick={() => setIsMenuOpen(false)}
+      ></div>
+    </>
+  );
+};
+
+export default ClientNavbar;

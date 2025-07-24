@@ -1,0 +1,238 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root {
+  --blue-primary: #1A3C6D; 
+  --blue-dark: #1A3C6D;
+  --accent-gold: #FFD700;
+  --white-primary: #FFFFFF;
+  --gray-light: #F3F4F6;
+  --gray-medium: #9CA3AF;
+  --text-dark: #1F2937;
+}
+
+
+.login-page-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #bfcedd, #1A3C6D);
+  padding: 2rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative; 
+}
+
+.back-button1 {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  background-color: var(--accent-gold);
+  color: var(--blue-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.back-button1:hover {
+  background-color: var(--blue-dark);
+  color: var(--white-primary);
+}
+
+.login-card {
+  display: flex;
+  width: 100%;
+  max-width: 950px;
+  min-height: 600px;
+  background-color: var(--white-primary);
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.panel-form {
+  flex-basis: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.panel-illustration {
+  flex-basis: 45%;
+  background-color: var(--blue-primary);
+  color: var(--white-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  clip-path: ellipse(110% 80% at 75% 50%);
+}
+
+.panel-illustration h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.panel-illustration p {
+  font-size: 0.9rem;
+  max-width: 300px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.illustration {
+  max-width: 280px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 2.5rem;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.input-wrapper .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: var(--gray-medium);
+}
+
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: var(--gray-medium);
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .password-toggle-icon:hover {
+    color: var(--blue-primary);
+  }
+
+.input-wrapper input {
+  width: 100%;
+  height: 55px;
+  background-color: var(--gray-light);
+  border: 2px solid transparent;
+  border-radius: 55px;
+  padding: 0 20px 0 50px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-wrapper input::placeholder {
+  color: var(--gray-medium);
+}
+
+.input-wrapper input:focus {
+  border-color: var(--blue-primary);
+}
+
+
+.btn {
+  height: 50px;
+  width: 180px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-solid {
+  background-color: var(--accent-gold);
+  color: var(--blue-dark);
+  margin-top: 1rem;
+}
+
+.btn-solid:hover {
+  background-color: #1A3C6D; 
+  color: yellow;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--white-primary);
+  color: var(--white-primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--white-primary);
+  color: var(--blue-primary);
+}
+
+
+.error-message {
+  color: #c0392b;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .login-card {
+    flex-direction: column-reverse; 
+    min-height: auto;
+  }
+  .panel-form, .panel-illustration {
+    flex-basis: auto;
+    width: 100%;
+    padding: 2rem;
+    clip-path: none;
+  }
+  .panel-form {
+    padding-top: 3rem;
+  }
+  .panel-illustration {
+    padding-bottom: 6rem; 
+    clip-path: ellipse(150% 80% at 50% 130%);
+  }
+  .illustration {
+    display: none; 
+  }
+}

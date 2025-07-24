@@ -1,0 +1,25 @@
+{
+  "short_name": "QueueMaster",
+  "name": "QueueMaster - Gestion de files d'attente",
+  "icons": [
+    {
+      "src": "/file-attente-frontend/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/file-attente-frontend/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/file-attente-frontend/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/file-attente-frontend/",
+  "display": "standalone",
+  "theme_color": "#1e3a8a",
+  "background_color": "#ffffff"
+}
